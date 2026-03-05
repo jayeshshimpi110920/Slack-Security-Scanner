@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔒 Slack Security Scanner 
 
 ## 📋 Description
@@ -68,3 +69,6 @@ Sample code does not belongs to me.. I just use sample-code to test scanner.
 
 
 
+=======
+# Slack-Security-Scanner
+>>>>>>> 87fc7225a3ccce3f91f738969850370230f1b914
