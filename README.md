@@ -10,7 +10,7 @@ main-folder/
 ├── app1/                 # Your Slack app 1
 ├── app2/                 # Your Slack app 2
 ├── app3/                 # Your Slack app 3
-└── slack_scanner.py      # Scanner script
+└── secret_scanner.py      # Scanner script
 ```
 
 ## 🚀 Installation
