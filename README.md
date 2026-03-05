@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🔒 Slack Security Scanner 
 
 ## 📋 Description
@@ -55,20 +55,10 @@ Recommanded
 # Save report to file
 python slack_scanner.py app1 -s
 ```
-
 JSON format output  : [View Scan Output Report](./security_scan_20260305_171115.json)    
 TXT format output   : [View Scan Output Report](./security_scan_20260305_171115.txt)  
-
 
 -------------------
 Please NOTE : 
 Sample code does not belongs to me.. I just use sample-code to test scanner.   
 
-
-
-
-
-
-=======
-# Slack-Security-Scanner
->>>>>>> 87fc7225a3ccce3f91f738969850370230f1b914
