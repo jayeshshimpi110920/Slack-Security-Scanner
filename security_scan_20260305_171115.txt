@@ -1,0 +1,96 @@
+====================================================================================================
+🔒 SLACK SECURITY SCANNER REPORT
+📅 2026-03-05 17:11:15
+📁 Scan Path: sample-code
+====================================================================================================
+
+⚠️  Found 11 potential security issues:
+
+📊 SUMMARY BY SEVERITY:
+  🟠 HIGH: 2
+  🔵 LOW: 9
+
+================================================================================
+🟠 HIGH SEVERITY ISSUES (2)
+================================================================================
+
+1. Slack webhook configuration
+   📁 File: sample-code\realpython\receive.py
+   📍 Line: 7
+   🔍 Match: webh******lack
+   📝 Context: SLACK_WEBHOOK_SECRET = os.environ.get('SLACK_WEBHOOK_SECRET')
+   ------------------------------------------------------------
+
+2. Slack webhook configuration
+   📁 File: sample-code\twilio\twiliobot.py
+   📍 Line: 8
+   🔍 Match: webh******lack
+   📝 Context: SLACK_WEBHOOK_SECRET = os.environ.get('SLACK_WEBHOOK_SECRET', None)
+   ------------------------------------------------------------
+
+================================================================================
+🔵 LOW SEVERITY ISSUES (9)
+================================================================================
+
+1. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\app.py
+   📍 Line: 33
+   🔍 Match: print\(
+   📝 Context: print("Channels: ")
+   ------------------------------------------------------------
+
+2. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\app.py
+   📍 Line: 35
+   🔍 Match: print\(
+   📝 Context: print(channel['name'] + " (" + channel['id'] + ")")
+   ------------------------------------------------------------
+
+3. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\app.py
+   📍 Line: 38
+   🔍 Match: print\(
+   📝 Context: print('Latest text from ' + channel['name'] + ":")
+   ------------------------------------------------------------
+
+4. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\app.py
+   📍 Line: 39
+   🔍 Match: print\(
+   📝 Context: print(detailed_info['latest']['text'])
+   ------------------------------------------------------------
+
+5. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\app.py
+   📍 Line: 43
+   🔍 Match: print\(
+   📝 Context: print('-----')
+   ------------------------------------------------------------
+
+6. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\app.py
+   📍 Line: 45
+   🔍 Match: print\(
+   📝 Context: print("Unable to authenticate.")
+   ------------------------------------------------------------
+
+7. Info Leakage: Print statement - possible info leakage
+   📁 File: sample-code\realpython\receive.py
+   📍 Line: 17
+   🔍 Match: print\(
+   📝 Context: print(inbound_message)
+   ------------------------------------------------------------
+
+8. Info Leakage: Debug mode enabled
+   📁 File: sample-code\realpython\receive.py
+   📍 Line: 27
+   🔍 Match: debug\s*=\s*True
+   📝 Context: app.run(debug=True)
+   ------------------------------------------------------------
+
+9. Info Leakage: Debug mode enabled
+   📁 File: sample-code\twilio\twiliobot.py
+   📍 Line: 41
+   🔍 Match: debug\s*=\s*True
+   📝 Context: app.run(debug=True)
+   ------------------------------------------------------------

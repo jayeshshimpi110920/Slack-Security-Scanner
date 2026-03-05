@@ -1,0 +1,110 @@
+{
+  "scan_time": "2026-03-05T17:11:15.096435",
+  "scan_path": "sample-code",
+  "total_findings": 11,
+  "findings_by_severity": {
+    "LOW": [
+      {
+        "file": "sample-code\\realpython\\app.py",
+        "line": 33,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print(\"Channels: \")",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.070738"
+      },
+      {
+        "file": "sample-code\\realpython\\app.py",
+        "line": 35,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print(channel['name'] + \" (\" + channel['id'] + \")\")",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.071720"
+      },
+      {
+        "file": "sample-code\\realpython\\app.py",
+        "line": 38,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print('Latest text from ' + channel['name'] + \":\")",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.072812"
+      },
+      {
+        "file": "sample-code\\realpython\\app.py",
+        "line": 39,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print(detailed_info['latest']['text'])",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.072812"
+      },
+      {
+        "file": "sample-code\\realpython\\app.py",
+        "line": 43,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print('-----')",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.073819"
+      },
+      {
+        "file": "sample-code\\realpython\\app.py",
+        "line": 45,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print(\"Unable to authenticate.\")",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.073819"
+      },
+      {
+        "file": "sample-code\\realpython\\receive.py",
+        "line": 17,
+        "issue": "Info Leakage: Print statement - possible info leakage",
+        "match": "print\\(",
+        "context": "print(inbound_message)",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.079918"
+      },
+      {
+        "file": "sample-code\\realpython\\receive.py",
+        "line": 27,
+        "issue": "Info Leakage: Debug mode enabled",
+        "match": "debug\\s*=\\s*True",
+        "context": "app.run(debug=True)",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.080932"
+      },
+      {
+        "file": "sample-code\\twilio\\twiliobot.py",
+        "line": 41,
+        "issue": "Info Leakage: Debug mode enabled",
+        "match": "debug\\s*=\\s*True",
+        "context": "app.run(debug=True)",
+        "severity": "LOW",
+        "timestamp": "2026-03-05T17:11:15.091431"
+      }
+    ],
+    "HIGH": [
+      {
+        "file": "sample-code\\realpython\\receive.py",
+        "line": 7,
+        "issue": "Slack webhook configuration",
+        "match": "webh******lack",
+        "context": "SLACK_WEBHOOK_SECRET = os.environ.get('SLACK_WEBHOOK_SECRET')",
+        "severity": "HIGH",
+        "timestamp": "2026-03-05T17:11:15.078402"
+      },
+      {
+        "file": "sample-code\\twilio\\twiliobot.py",
+        "line": 8,
+        "issue": "Slack webhook configuration",
+        "match": "webh******lack",
+        "context": "SLACK_WEBHOOK_SECRET = os.environ.get('SLACK_WEBHOOK_SECRET', None)",
+        "severity": "HIGH",
+        "timestamp": "2026-03-05T17:11:15.086932"
+      }
+    ]
+  }
+}
